@@ -1,2 +1,2 @@
 # precious
-AWS project and POC repository
+AWS projects and POC repository
