@@ -1,0 +1,32 @@
+{
+   "Description": "Create an EC2 instance running the latest Amzon Linux AMI",
+   "Parameters": {
+       "KeyPair": {
+          "Description": "The SSH key pair to allow access to the instance",
+          "Type": "String"
+                   }
+                 },
+   "Resources": {
+     "Ec2Instance": {
+        "Properties": {
+              "ImageId": "ami-0817d428a6fb68645",
+              "InstanceType": "t2.micro",
+              "KeyName": {
+                "Ref": "KeyPair"
+                         }
+                       },
+      "Type": "AWS::EC2::Instance"
+     }
+},
+    "Outputs": {
+        "InstanceId": {
+           "Description": "The instanceId of the newly created EC2 instance",
+           "Value": {
+               "Ref": "Ec2Instance"
+    }
+  }
+},
+      "AWSTemplateFormatVersion": "2010-09-09"
+}
+  
+             
