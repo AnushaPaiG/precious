@@ -1,4 +1,3 @@
-##Install and configure apache on the EC2 instance
 #!/bin/bash
 sudo apt update
 sudo apt install -y apache2
